@@ -1,4 +1,3 @@
-import uuid from 'react-uuid'
 
 export default function manageBand(state = {
   bands: []
@@ -6,7 +5,7 @@ export default function manageBand(state = {
   switch (action.type) {
     case 'ADD_BAND':
       const band = {
-        id: uuid(),
+        id: Math.random(),
         name: action.name
       }
       return { ...state, bands: [...state.bands, band] }
